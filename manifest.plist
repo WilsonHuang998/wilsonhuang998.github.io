@@ -1,59 +1,31 @@
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
-"http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-   <dict>
-      <!-- array of downloads. -->
-      <key>items</key>
-      <array>
-         <dict>
-            <!-- an array of assets to download -->
-            <key>assets</key>
-            <array>
-               <!-- software-package: the ipa to install. -->
-               <dict>
-                  <!-- required.  the asset kind. -->
-                  <key>kind</key>
-                  <string>software-package</string>
-                  <!-- optional.  md5 every n bytes. -->
-                  <!-- 選擇性，設定 Chunk 大小，例如 10485760 表示 10 MB，ipa 檔案每 10 MB 就會有一個 md5  -->
-                  <!-- will restart a chunk if md5 fails. -->
-                  <key>md5-size</key>
-                  <integer>10485760</integer>
-                  <!-- optional.  array of md5 hashes. -->
-                  <!-- 選擇性，若有設定 Chunk 大小，根據檔案切分成 n 個 Chunk，就有 n 個 MD5。若沒有設定 Chunk，則填整個檔案的 md5 -->
-                  <key>md5s</key>
-                  <array>
-                     <string>41fa64bb7a7cae5a46bfb45821ac8bba</string>
-                     <string>51fa64bb7a7cae5a46bfb45821ac8bba</string>
-                  </array>
-                  <!-- required.  the URL of the file to download. -->
-                  <!-- 必須，ipa 檔案位置 -->
-                  <key>url</key>
-                  <string>https://dl.dropboxusercontent.com/s/33738tt2fyu6ns1/KpiEvaluation.ipa</string>
-               </dict>
-            </array>
-            <key>metadata</key>
+<dict>
+<key>items</key>
+<array>
+    <dict>
+        <key>assets</key>
+        <array>
             <dict>
-               <!-- required -->
-               <!-- 必須，可以用 7-zip 解開 ipa，從中找到 Info.plist 來看 -->
-               <key>bundle-identifier</key>
-               <string>com.kerrytj.kpiapp</string>
-               <!-- optional (software only) -->
-               <key>bundle-version</key>
-               <string>1.0</string>
-               <!-- required.  the download kind. -->
-               <key>kind</key>
-               <string>software</string>
-               <!-- optional. displayed during download; typically company name -->
-               <!-- 選擇，下載時顯示，通常填公司名稱 -->
-               <key>subtitle</key>
-               <string>KerryTj</string>
-               <!-- required.  the title to display during the download. -->
-               <!-- 必須，下載時顯示 -->
-               <key>title</key>
-               <string>KpiEvaluation</string>
+                <key>kind</key>
+                <string>software-package</string>
+                <key>url</key>
+                <string>https://dl.dropboxusercontent.com/s/33738tt2fyu6ns1/KpiEvaluation.ipa</string>
             </dict>
-         </dict>
-      </array>
-   </dict>
+        </array>
+        <key>metadata</key>
+        <dict>
+            <key>bundle-identifier</key>
+            <string>com.kerrytj.kpiapp</string>
+            <key>bundle-version</key>
+            <string>1.1.0</string>
+            <key>kind</key>
+            <string>software</string>
+            <key>title</key>
+            <string>Kpi Evaluation</string>
+        </dict>
+    </dict>
+</array>
+</dict>
 </plist>
